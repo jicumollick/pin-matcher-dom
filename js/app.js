@@ -2,7 +2,6 @@
 
 function getPin(){
     const pin = Math.round(Math.random() * 10000);
-
     let pinString = pin + '';
     if(pinString.length == 4){
         return pin;
@@ -10,12 +9,9 @@ function getPin(){
     }else {
         getPin();
     }
-
 }
 
-
 function generatePin(){
-
    let pin = getPin();
 
    document.getElementById('display-pin').value = pin;
@@ -52,6 +48,5 @@ function veryfyPin(){
     }else {
         document.getElementById('notify-fail').style.display = "block";
         document.getElementById('notify-sucess').style.display = "none";
-
     }
 }
